@@ -127,6 +127,43 @@ Best Practice documentation steps:
 * Remove unnecessary/commented out code
 * If needed, update git ignore to remove sensitive data
 
+## Usage and Testing
+
+### Running the Tests
+
+To run the tests and verify the implementation, use the following command:
+
+```bash
+python -m pytest lib/testing/song_test.py -v
+```
+
+This will execute all the tests and show detailed results for each test case.
+
+### Song Class Functionality
+
+The Song class provides the following functionality:
+
+1. **Instance Attributes**:
+   - `name`: The name of the song
+   - `artist`: The artist who performed the song
+   - `genre`: The genre of the song
+
+2. **Class Attributes (Statistics)**:
+   - `count`: Total number of Song instances created
+   - `genres`: List of all unique genres across all songs
+   - `artists`: List of all unique artists across all songs
+   - `genre_count`: Dictionary counting songs per genre (e.g., {"Rap": 5, "Rock": 1})
+   - `artist_count`: Dictionary counting songs per artist (e.g., {"Beyonce": 17, "Jay-Z": 40})
+
+3. **Class Methods**:
+   - `add_song_to_count()`: Increments the total count of Song instances
+   - `add_to_genres(genre)`: Adds a genre to the list of unique genres (if not already present)
+   - `add_to_artists(artist)`: Adds an artist to the list of unique artists (if not already present)
+   - `add_to_genre_count(genre)`: Updates the genre count dictionary
+   - `add_to_artist_count(artist)`: Updates the artist count dictionary
+
+All class-level updates are automatically triggered when a new Song instance is created.
+
 ## Save your work and push to GitHub
 
 Before you submit your solution, you need to save your progress with git.
@@ -140,7 +177,7 @@ Before you submit your solution, you need to save your progress with git.
 2. Your submission will be automatically scored in CodeGrade, using the most recent commit. Remember to make sure you have pushed your commit to GitHub before submitting your assignment. 
 3. You can review your submission in CodeGrade and see your final score in your Canvas gradebook.
 4. When you are ready to submit, click the ***Load Lab: Object Oriented Programming (OOP)- Part 1- Bookstore*** button in Canvas to launch CodeGrade.
-  * Click on + Create Submission. Connect your repository for this lab.
-  * For additional information on submitting assignments in CodeGrade: [Getting Started in Canvas](https://help.codegrade.com/for-students/getting-started/getting-started-in-canvas)
+   * Click on + Create Submission. Connect your repository for this lab.
+   * For additional information on submitting assignments in CodeGrade: [Getting Started in Canvas](https://help.codegrade.com/for-students/getting-started/getting-started-in-canvas)
 
 
